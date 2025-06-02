@@ -100,3 +100,4 @@ const simplelightbox = new SimpleLightbox('.gallery .gallery-link', {
     captionPosition: 'bottom',
     captionDelay: 250,
 });
+
