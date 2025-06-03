@@ -4,12 +4,12 @@ const textarea = document.querySelector('textarea[name="message"]');
 const btn = document.querySelector("button");
 btn.classList.add("btn");
 
-populateInput();
-
 const formData = {
     email: "",
     message: "",
 };
+
+populateInput();
 
 form.addEventListener("input", formChange);
 
