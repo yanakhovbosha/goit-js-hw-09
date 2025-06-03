@@ -40,7 +40,7 @@ a {
   transition: background-color 250ms;
 }
 
-button:hover {
+.btn:hover {
   background: #6c8cff;
   
 }
