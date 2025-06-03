@@ -1,7 +1,8 @@
 const form = document.querySelector(".feedback-form");
-const input = document.querySelector("input");
-const textarea = document.querySelector("textarea");
+const input = document.querySelector('input[name="email"]');
+const textarea = document.querySelector('textarea[name="message"]');
 const btn = document.querySelector("button");
+btn.classList.add("btn");
 
 populateInput();
 
@@ -17,7 +18,6 @@ function formChange(event) {
     const value = event.target.value.trim();
     formData[userName] = value;
     localStorage.setItem("feedback-form-state", JSON.stringify(formData));
-
 };
 
 function populateInput() {
@@ -26,7 +26,9 @@ function populateInput() {
         const parseValue = JSON.parse(value);
         input.value = parseValue.email || "";
         textarea.value = parseValue.message || "";
-        console.log(value);
+
+        formData.email = parseValue.email || "";
+        formData.message = parseValue.message || "";
     }
 }
 
